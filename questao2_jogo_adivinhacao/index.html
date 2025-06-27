@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Adivinhação</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    form{
+      background-color: rgb(201, 160, 240);
+      width: 80vh;
+      padding: 20px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      border-radius: 9px;
+      margin: 30px auto;
+      color: rgb(128, 5, 243);
+    }
+
+    form h1, form p, #resultado, #tentativas{
+      text-align: center;
+    }
+
+    form input{
+      display: block;
+      width: 80%;
+      background-color: rgb(201, 160, 240);
+      border: 1px solid  rgb(128, 5, 243);
+      border-radius: 20px;
+      font-size: 20px;
+      color: rgb(128, 5, 243);
+      padding: 10px 20px;
+      outline: none;
+      margin: 20px auto 0;
+    }
+
+    form button{
+      display: block;
+      width: 80%;
+      padding: 12px 0;
+      background-color: rgb(128, 5, 243);
+      border: none;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #f0f0f0;
+      margin: 10px auto;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    form button:hover{
+      background-color: rgb(78, 2, 150);
+    }
+
+    #resultado{
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form onsubmit="adivinhar(); return false;">
+    <h1>Jogo de Adivinhação</h1>
+    <p>Tente adivinhar o número entre 1 e 100!</p>
+    <input type="number" id="palpite" placeholder="Digite seu palpite">
+    <button type="submit">Enviar Palpite</button>
+    <div id="resultado"></div>
+    <div id="tentativas"></div>
+  </form>
+    
+  <script src="script.js"></script>
+</body>
+</html>

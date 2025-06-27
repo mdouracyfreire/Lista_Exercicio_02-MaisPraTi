@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação de Data</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .form{
+      background-color: rgb(201, 160, 240);
+      width: 80vh;
+      padding: 20px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      border-radius: 9px;
+      margin: 30px auto;
+      color: rgb(128, 5, 243);
+    }
+
+    .form h1{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .area-form{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .area-form label{
+      font-weight: bold;
+      width: 20%;
+    }
+
+    .area-form input{
+      height: 40px;
+      width: 80%;
+      background-color: rgb(201, 160, 240);
+      border: 1px solid  rgb(128, 5, 243);
+      border-radius: 20px;
+      font-size: 20px;
+      color: rgb(128, 5, 243);
+      padding: 0 20px;
+      outline: none;
+    }
+
+    .form button{
+      width: 100%;
+      padding: 15px 0;
+      background-color: rgb(128, 5, 243);
+      border: none;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #f0f0f0;
+      margin: 40px 0 0;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .form button:hover{
+      background-color: rgb(78, 2, 150);
+    }
+
+    #resultado{
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form">
+    <h1>Validação de Data</h1>
+
+    <div class="area-form">
+      <label>Dia: </label>
+      <input type="number" id="dia">
+    </div>
+
+    <div class="area-form">
+      <label>Mês: </label>
+      <input type="number" id="mes">
+    </div>
+
+    <div class="area-form">
+      <label>Ano: </label>
+      <input type="number" id="ano">
+    </div>
+    <button onclick="testarData()">Validar</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversão entre Pares e Objeto</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .form{
+      background-color: rgb(201, 160, 240);
+      width: 80vh;
+      padding: 20px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      border-radius: 9px;
+      margin: 30px auto;
+      color: rgb(128, 5, 243);
+    }
+
+    .form h1{
+      text-align: center;
+    }
+
+    form h2{
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    form textarea{
+      display: block;
+      width: 80%;
+      background-color: rgb(201, 160, 240);
+      border: 1px solid  rgb(128, 5, 243);
+      border-radius: 20px;
+      font-size: 20px;
+      color: rgb(128, 5, 243);
+      padding: 10px 20px;
+      outline: none;
+      margin: 20px auto 0;
+    }
+
+    form button{
+      display: block;
+      width: 80%;
+      padding: 12px 0;
+      background-color: rgb(128, 5, 243);
+      border: none;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #f0f0f0;
+      margin: 5px auto 50px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    form button:hover{
+      background-color: rgb(78, 2, 150);
+    }
+
+    #resultadoPares, #resultadoObjeto{
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form">
+    <h1>Conversão entre Pares e Objeto</h1>
+
+    <form onsubmit="paresParaObjeto(); return false;">
+      <h2>📥 Pares para Objeto</h2>
+      <textarea id="inputPares" rows="5" cols="50" placeholder='Ex: [["nome", "João"], ["idade", 30]]' required></textarea><br>
+      <button type="submit">Converter para Objeto</button>
+      <pre id="resultadoPares"></pre>
+    </form>
+
+    <form onsubmit="objetoParaPares(); return false;">
+      <h2>📤 Objeto para Pares</h2>
+      <textarea id="inputObjeto" rows="5" cols="50" placeholder='Ex: {"nome":"João","idade":30}' required></textarea><br>
+      <button type="submit">Converter para Pares</button>
+      <pre id="resultadoObjeto"></pre>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
